@@ -1,0 +1,101 @@
+body {
+    box-sizing: border-box;
+}
+
+.d-flex input {
+    margin: .9em 0em;
+}
+
+.d-flex button {
+    margin: 1.5em .6em;
+    padding: .3em 2.4em;
+}
+
+.d-flex table {
+    margin: 1em 10em;
+}
+
+table .btnedit {
+    color: lightgreen;
+    cursor: pointer;
+}
+
+table .btndelete {
+    color: tomato;
+    cursor: pointer;
+}
+
+/* это от структуры дерева*/
+
+span { /* обертка пункта */
+      text-decoration: none;
+      display: block; 
+      margin: 0 0 0 1.2em;     
+      background-color: transparent;
+      border: solid silver;
+      border-width: 0 0 1px 1px; 
+       }
+/* это для сворач узлов*/
+ul, li {
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+        margin:0;
+        padding:0;
+      }
+        ul li {
+         line-height: 1.2em;
+        }
+         ul li ul {
+           display: none; /* узлы свернуты */
+         }
+           ul li ul li {
+            margin: 0 0 0 1.2em;
+            border-left: 1px solid silver; 
+           }
+           li.last {
+            border: none; 
+        }
+
+        .marker { /* маркер раскрытия списка в закр сост */
+            border-color: transparent transparent transparent gray;
+            border-style: solid;
+            border-width: .25em 0 .25em .5em; 
+            margin: .35em .25em 0 0;
+            float: left;
+            width: 0px;
+            height: 0px;
+            line-height: 0px;
+          }
+          .marker.open {/* маркер раскрытия списка в откр сост */
+            border-color: gray transparent transparent transparent;
+            border-width: .5em .25em 0 .25em; 
+          }
+
+
+
+
+
+
+/* смска */
+.updatemsg,
+.deletemsg,
+.insertmsg {
+    position: absolute ;
+    top: -50px;
+}
+
+.movedown {
+    animation: slideup 3.4s ease;
+}
+
+@keyframes slideup {
+    50% {
+        top: 0px;
+    }
+
+    100% {
+        top: -60px;
+    }
+}
+
